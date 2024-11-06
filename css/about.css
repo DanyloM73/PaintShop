@@ -1,0 +1,358 @@
+body {
+  font-family: "SUSE", sans-serif;
+  font-weight: 400;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #123566;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 30px;
+}
+
+.box {
+  background-color: #00023D;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.header {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  margin-top: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.logo-img {
+  max-width: 75px;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.logo-text {
+  font-size: 35px;
+  font-weight: 800;
+  user-select: none;
+}
+
+.register-btn {
+  background-color: #123566;
+  font-size: 20px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.about {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.about-text {
+  max-width: 350px;
+}
+
+.about-title, .guide-header {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.about-subtitle, .card-text {
+  margin-bottom: 40px;
+}
+
+.about-img {
+  max-width: 400px;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 50px;
+}
+
+.benefit-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 30px;
+  min-height: 100%;
+}
+
+.card-title {
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.guide {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+
+.guide-header {
+  text-align: center;
+}
+
+.guide-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 30px;
+}
+
+.step-card {
+  color: #00023D;
+  background-color: #fff;
+  display: flex;
+  border-radius: 10px;
+  padding: 15px 30px;
+  transition: all 0.2s ease;
+}
+
+.step-number {
+  font-size: 90px;
+  font-weight: 800;
+  margin-right: 25px;
+}
+
+.step-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.step-subtitle {
+  font-size: 12px;
+}
+
+.footer {
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  margin-bottom: 10px;
+}
+
+ul li + li {
+  margin-top: 10px;
+}
+
+.info-links, .social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-link {
+  align-items: center;
+  display: flex;
+}
+
+.info-link, .social-link-text {
+  color: #fff;
+  position: relative;
+  text-decoration: none;
+}
+
+.info-link::after, .social-link-text::after {
+  content: ""; 
+  display: block; 
+  height: 2px; 
+  width: 100%; 
+  background: #fff; 
+  position: absolute; 
+  left: 0; 
+  bottom: 0; 
+  transform: scaleX(0); 
+  transition: all 0.2s ease; 
+}
+
+.social-icon {
+  max-width: 25px;
+  margin-right: 10px;
+  transition: all 0.3s ease; 
+}
+
+@media (min-width: 1900px) {
+  body {
+    max-width: 1470px;
+  }
+
+  .logo-img {
+    max-width: 100px;
+  }
+
+  .logo-text {
+    font-size: 40px;
+  }
+
+  .about-text {
+    max-width: 500px;
+  }
+
+  .about-title, .guide-header {
+    font-size: 50px;
+  }
+
+  .about-subtitle, .card-text {
+    font-size: 20px;
+  }
+
+  .card-title {
+    font-size: 55px;
+  }
+
+  .step-header {
+    font-size: 25px;
+  }
+
+  .step-subtitle {
+    font-size: 15px;
+  }
+
+  .info-link, .social-link-text {
+    font-size: 18px;
+  }
+
+  .social-icon {
+    max-width: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  body {
+    max-width: 870px;
+  }
+
+  .about {
+    padding: 20px 40px;
+  }
+
+  .benefits {
+    display: none;
+  }
+
+  .guide-steps {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .step-descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo-text {
+    font-size: 20px;
+  }
+
+  .register-btn {
+    font-size: 12px;
+  }
+
+  .about {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-img {
+    display: none;
+  }
+
+  .footer .logo {
+    display: none;
+  }
+
+  .info-link, .social-link-text {
+    font-size: 10px;
+  }
+}
+
+@media (hover: hover) {
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  .logo:hover .logo-img {
+    transform: scale(1.05);
+  }
+
+  .register-btn:hover {
+    color: #00023D;
+    background-color: #fff;
+    transform: scale(1.05);
+  }
+
+  .step-card:hover {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  }
+
+  .info-link:hover::after, .social-link:hover .social-link-text::after {
+    transform: scaleX(1); 
+  }
+
+  .social-link:hover .social-icon {
+    transform: scale(1.2);
+  }
+}
+
+@media (hover: none) {
+  .logo:active {
+    transform: scale(1.05);
+  }
+  
+  .logo:active .logo-img {
+    transform: scale(1.05);
+  }
+
+  .register-btn:active {
+    color: #00023D;
+    background-color: #fff;
+    transform: scale(1.05);
+  }
+
+  .step-card:active {
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+    -moz-box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.7);
+  }
+
+  .info-link:active::after, .social-link:active .social-link-text::after {
+    transform: scaleX(1); 
+  }
+
+  .social-link:active .social-icon {
+    transform: scale(1.2);
+  }
+}
